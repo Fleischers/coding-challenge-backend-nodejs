@@ -1,0 +1,45 @@
+{
+  "name": "report-a-bike-api",
+  "version": "0.0.0-init",
+  "description": "Just another test assignment",
+  "main": "app.js",
+  "engines": {
+    "node": "10"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "nyc mocha --timeout=3000",
+    "unstaged": "git status --porcelain",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "eslint": "eslint --ignore-path .gitignore ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fleischers/coding-challenge-backend-nodejs.git"
+  },
+  "keywords": [
+    "api",
+    "server"
+  ],
+  "author": "Glib Ischenko <fcl@gorlifsense.com> (http://fleischer.gorlifsense.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fleischers/coding-challenge-backend-nodejs/issues"
+  },
+  "homepage": "https://github.com/Fleischers/coding-challenge-backend-nodejs#readme",
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "nyc": "^13.3.0",
+    "mocha": "^6.0.2",
+    "pre-commit": "^1.2.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1"
+  },
+  "dependencies": {
+
+  },
+  "pre-commit": [
+    "eslint",
+    "unstaged"
+  ]
+}
