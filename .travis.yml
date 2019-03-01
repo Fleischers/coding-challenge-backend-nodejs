@@ -2,12 +2,10 @@ language: node_js
 node_js:
   - "10"
   - "11"
-before_script:
+after_success:
   - npm run coverage
-after_script:
-  - npm run codeclimate
 notifications:
   slack:
     rooms:
-      weirdunicorn:S7RWHqp3eUYiYBusZOzXytvR#join-challenge
+      gorlifsense:S7RWHqp3eUYiYBusZOzXytvR#join-challenge
     on_success: change
