@@ -14,3 +14,5 @@ app.on('request', (req, res) => {
 app.listen(port, () => {
   console.log(`${name} is listening on port ${port}`);
 });
+
+module.exports = app;
