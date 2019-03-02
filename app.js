@@ -1,6 +1,7 @@
 const http = require('http');
+const winston = require('winston');
 
-const name = 'node-hello-world';
+const name = require('./package.json').name;
 const port = process.env.PORT || '8080';
 
 const app = new http.Server();
@@ -12,7 +13,7 @@ app.on('request', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`${name} is listening on port ${port}`);
+  winston.info(`${name} is listening on port ${port}`);
 });
 
 module.exports = app;

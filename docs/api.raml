@@ -1,0 +1,75 @@
+#%RAML 1.0
+title: report a bike api
+version: v1
+baseUri: https://report-a-bike-api.herokuapp.com/
+mediaType:  application/json
+
+description: Stolen bikes are a typical problem in Berlin and this automates the problem for the Police
+
+types:
+  meta:
+    type: object
+    properties:
+      creationDate: datetime
+      lastModified: datetime
+
+  Bike:
+    type: object
+    properties:
+      id: number
+      description: string
+      licenseNumber: string
+      color: string
+      ownerName: string
+      date: date-only
+      meta: Meta
+
+  Department:
+    type: object
+    properties:
+      id: number
+      officers: Officer[]
+      meta: Meta
+
+  Officer:
+    type: object
+    properties:
+      id: number
+      name: string
+      departmentId: number
+      assignedCaseId: number
+      meta: Meta
+
+  Case:
+    type: object
+    properties:
+      id: number
+      assignedOfficerId: number
+      resolved: boolean
+      bike: Bike
+      meta: Meta
+
+
+/cases:
+  post:
+    description: Create a new bike theft report
+    body:
+      type: Bike
+
+  /{id}:
+    get:
+      description: Review a particular case report
+      body:
+        type: Case
+      responses:
+        200:
+          body:
+            type: Case
+
+/departments:
+  post:
+    description: Police can create a Department
+
+  /{id}/officer:
+    post:
+      description: police officer can be created for the department

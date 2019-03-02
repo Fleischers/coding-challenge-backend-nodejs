@@ -36,7 +36,7 @@
     "chai-http": "^4.2.1"
   },
   "dependencies": {
-
+    "winston": "^3.2.1"
   },
   "pre-commit": [
     "eslint",
