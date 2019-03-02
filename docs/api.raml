@@ -10,26 +10,24 @@ types:
   meta:
     type: object
     properties:
-      creationDate: datetime
-      lastModified: datetime
+      creationDate?: datetime
+      lastModified?: datetime
 
   Bike:
     type: object
     properties:
-      id: number
       description: string
       licenseNumber: string
       color: string
       ownerName: string
       date: date-only
-      meta: Meta
 
   Department:
     type: object
     properties:
       id: number
       officers: Officer[]
-      meta: Meta
+      meta?: Meta
 
   Officer:
     type: object
@@ -38,7 +36,7 @@ types:
       name: string
       departmentId: number
       assignedCaseId: number
-      meta: Meta
+      meta?: Meta
 
   Case:
     type: object
@@ -47,7 +45,7 @@ types:
       assignedOfficerId: number
       resolved: boolean
       bike: Bike
-      meta: Meta
+      meta?: Meta
 
 
 /cases:

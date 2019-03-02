@@ -1,12 +1,20 @@
-const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
 const winston = require('winston');
 
 const name = require('./package.json').name;
-const port = process.env.PORT || '8080';
+const port = process.env.PORT || 8080;
 
-const app = new http.Server();
+const app = express()
 
-app.on('request', (req, res) => {
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+
+app.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.write('Hello Bikes');
   res.end('\n');
