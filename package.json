@@ -1,6 +1,6 @@
 {
   "name": "report-a-bike-api",
-  "version": "0.0.0-init",
+  "version": "0.0.1-0",
   "description": "Just another test assignment",
   "main": "app.js",
   "engines": {
