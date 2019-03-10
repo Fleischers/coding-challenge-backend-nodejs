@@ -7,7 +7,7 @@ mediaType:  application/json
 description: Stolen bikes are a typical problem in Berlin and this automates the problem for the Police
 
 types:
-  meta:
+  Meta:
     type: object
     properties:
       creationDate?: datetime
@@ -25,14 +25,14 @@ types:
   Department:
     type: object
     properties:
-      id: number
+      id?: number
       officers: Officer[]
       meta?: Meta
 
   Officer:
     type: object
     properties:
-      id: number
+      id?: number
       name: string
       departmentId: number
       assignedCaseId: number
@@ -41,8 +41,8 @@ types:
   Case:
     type: object
     properties:
-      id: number
-      assignedOfficerId: number
+      id?: number
+      assignedOfficerId?: number
       resolved: boolean
       bike: Bike
       meta?: Meta
