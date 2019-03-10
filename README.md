@@ -1,4 +1,8 @@
 # Stolen Bike Cases - JOIN Coding Challenge - Backend (Node.js)
+
+[![Build Status](https://travis-ci.org/Fleischers/coding-challenge-backend-nodejs.svg?branch=master)](https://travis-ci.org/Fleischers/coding-challenge-backend-nodejs)
+[![Coverage Status](https://coveralls.io/repos/github/Fleischers/coding-challenge-backend-nodejs/badge.svg)](https://coveralls.io/github/Fleischers/coding-challenge-backend-nodejs)
+
 ![JOIN Stolen Bike Cases](https://github.com/join-com/coding-challenge-backend-nodejs/raw/master/illustration.png)
 
 ## Context
@@ -39,5 +43,9 @@ Please stick to the Product Requirements. You should not implement authorisation
 
 ## Result
 
-API deployed to Heroku:
+Bikes API deployed to Heroku:
 https://report-a-bike-api.herokuapp.com/
+
+### API docs
+
+See RAML files in `/docs`

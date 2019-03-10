@@ -15,9 +15,7 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.write('Hello Bikes');
-  res.end('\n');
+  res.status(200).json({message: 'Hello Bikes'});
 });
 
 app.listen(port, () => {
