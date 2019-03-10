@@ -1,6 +1,6 @@
 {
   "name": "report-a-bike-api",
-  "version": "0.0.0-init",
+  "version": "0.0.1-0",
   "description": "Just another test assignment",
   "main": "app.js",
   "engines": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "nyc mocha --timeout=3000",
+    "test": "nyc --reporter=html --reporter=text mocha --exit",
     "unstaged": "git status --porcelain",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "eslint": "eslint --ignore-path .gitignore ."
@@ -28,15 +28,19 @@
   },
   "homepage": "https://github.com/Fleischers/coding-challenge-backend-nodejs#readme",
   "devDependencies": {
-    "eslint": "^2.11.1",
-    "nyc": "^13.3.0",
-    "mocha": "^6.0.2",
-    "pre-commit": "^1.2.2",
     "chai": "^4.2.0",
-    "chai-http": "^4.2.1"
+    "chai-http": "^4.2.1",
+    "coveralls": "^3.0.3",
+    "eslint": "^2.11.1",
+    "mocha": "^6.0.2",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^13.3.0",
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {
-
+    "express": "^4.16.4",
+    "pg": "^7.8.1",
+    "winston": "^3.2.1"
   },
   "pre-commit": [
     "eslint",
