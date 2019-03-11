@@ -1,6 +1,6 @@
 {
   "name": "report-a-bike-api",
-  "version": "0.0.1-0",
+  "version": "0.0.1",
   "description": "Test assignment for join.com",
   "main": "index.js",
   "engines": {
