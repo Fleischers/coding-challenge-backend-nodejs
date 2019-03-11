@@ -36,7 +36,6 @@ describe('Express is running in production mode', () => {
   });
 
   it('should get catch-all error message when something broke on Not Found catcher', (done) => {
-    // console.log(_router.stack);
 
     app._router.stack.some((route) => {
       if (route.handle.name === 'catchNotFound') {
